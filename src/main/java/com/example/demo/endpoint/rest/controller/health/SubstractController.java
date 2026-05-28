@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @AllArgsConstructor
 public class SubstractController {
-    private final SubstractService substractService;
+  private final SubstractService substractService;
 
-    @GetMapping("/substract")
-    public int substract(@RequestParam int a, @RequestParam int b) {
-        return substractService.substract(a, b);
-    }
+  @GetMapping("/substract")
+  public int substract(@RequestParam int a, @RequestParam int b) {
+    return substractService.substract(a, b);
+  }
 }

@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @AllArgsConstructor
 public class AddController {
-    private final AddService addService;
+  private final AddService addService;
 
-    @GetMapping("/add")
-    public int add(@RequestParam int a, @RequestParam int b) {
-        return addService.add(a, b);
-    }
+  @GetMapping("/add")
+  public int add(@RequestParam int a, @RequestParam int b) {
+    return addService.add(a, b);
+  }
 }

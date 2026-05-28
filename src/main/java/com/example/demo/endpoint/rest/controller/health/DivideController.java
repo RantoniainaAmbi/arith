@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @AllArgsConstructor
 public class DivideController {
-    private final DivideService divideService;
+  private final DivideService divideService;
 
-    @GetMapping("/divide")
-    public int divide(@RequestParam int a, @RequestParam int b) {
-        return divideService.divide(a, b);
-    }
+  @GetMapping("/divide")
+  public int divide(@RequestParam int a, @RequestParam int b) {
+    return divideService.divide(a, b);
+  }
 }
