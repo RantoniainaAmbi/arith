@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class SubstractService {
-  public int substract(int a, int b) {
+  public long substract(long a, long b) {
     if (a < 0 || b < 0) {
       throw new IllegalArgumentException("Negative numbers are not allowed");
     }

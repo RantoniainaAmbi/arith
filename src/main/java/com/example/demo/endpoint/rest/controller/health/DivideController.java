@@ -12,7 +12,7 @@ public class DivideController {
   private final DivideService divideService;
 
   @GetMapping("/divide")
-  public int divide(@RequestParam int a, @RequestParam int b) {
+  public long divide(@RequestParam long a, @RequestParam long b) {
     return divideService.divide(a, b);
   }
 }

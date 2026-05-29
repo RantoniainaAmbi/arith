@@ -5,13 +5,21 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.example.demo.service.MultiplyService;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
+@SpringBootTest
 class MultiplyServiceTest {
-  private final MultiplyService service = new MultiplyService();
+  @Autowired private MultiplyService service;
 
   @Test
   void multiplyShouldReturnProductForPositiveNumbers() {
     assertEquals(12, service.multiply(3, 4));
+  }
+
+  @Test
+  void multiplyShouldReturnProductForLongNumbers() {
+    assertEquals(200_000_000_000_000L, service.multiply(10_000_000L, 20_000_000L));
   }
 
   @Test

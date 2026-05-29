@@ -12,7 +12,7 @@ public class SubstractController {
   private final SubstractService substractService;
 
   @GetMapping("/substract")
-  public int substract(@RequestParam int a, @RequestParam int b) {
+  public long substract(@RequestParam long a, @RequestParam long b) {
     return substractService.substract(a, b);
   }
 }

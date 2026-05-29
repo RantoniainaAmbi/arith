@@ -12,7 +12,7 @@ public class AddController {
   private final AddService addService;
 
   @GetMapping("/add")
-  public int add(@RequestParam int a, @RequestParam int b) {
+  public long add(@RequestParam long a, @RequestParam long b) {
     return addService.add(a, b);
   }
 }
