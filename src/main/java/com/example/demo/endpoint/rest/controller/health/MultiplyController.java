@@ -12,7 +12,7 @@ public class MultiplyController {
   private final MultiplyService multiplyService;
 
   @GetMapping("/multiply")
-  public int multiply(@RequestParam int a, @RequestParam int b) {
+  public long multiply(@RequestParam long a, @RequestParam long b) {
     return multiplyService.multiply(a, b);
   }
 }
